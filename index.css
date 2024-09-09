@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto 20%;
+    grid-template-rows: 100px auto 100px;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    background: grey;
+    gap: 10px;
+    grid-template-areas:
+    "header aside"
+    "content aside"
+    "footer aside"
+    
+  }
+  
