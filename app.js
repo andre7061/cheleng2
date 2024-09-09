@@ -9,7 +9,11 @@ getApi('/todos?userId=1').then(el=>console.log(el.length)) // 20
 
 // 2) /todos - Сколько задач выполнил пользователь с id = 9? completed
 
-getApi('/todos?userId=9').then(el => console.log(el.filter(user => !!user.completed).length - 1));// 7
+
+getApi('/todos?userId=9').then(el => el.filter(user=>user.completed === true)).then(el=>console.log(el.length)); // 8
+
+  
+ 
 
 // 3) /todos - Сколько постов написал каждый пользователь?
 
@@ -17,7 +21,7 @@ getApi("/posts").then(el=>el.forEach(user=>console.log(user.userId))) //10
 
 // 4) /todos - Сколько комментариев под постом с id = 11? 
 
-getApi("/comments?postId=11").then(el=>console.log(el.map(user=>user).length -1)) //4
+getApi("/comments?postId=11").then(el=>console.log(el.length)) //5
 
 // 5) /todos - Сколько комментариев под постом с id = 11?
 
